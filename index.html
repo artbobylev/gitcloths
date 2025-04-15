@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>GitCloths</title>
+	<script src="./main.js"></script>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://unpkg.com/cal-heatmap/dist/cal-heatmap.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/cal-heatmap/dist/cal-heatmap.css">
+</head>
+<body>
+	<div>
+		<label>
+		@
+		<input type="text" id="git_input" name="git_input" value="" placeholder="username" required>
+		</label>
+		<button onclick="getContributions(document.getElementById('git_input').value);">Создать</button>
+	</div>
+	<div>
+		<p class="user-name text-2xl text-white">@username on github</p>
+		<div class="cal-heatmap py-4 [&_svg]:bg-transparent"> </div>
+		<p class="contrib-data text-2xl text-white">3000 contributions in the last year</p>
+	</div>
+</body>
+</html>
+
